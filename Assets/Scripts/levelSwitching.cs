@@ -1,17 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class levelSwitching : MonoBehaviour
-{
-    // Update is called once per frame
-    void Update()
+public class levelSwitching : MonoBehaviour {
+    public string[] nextScene  = { "Level-1", "Level-2", "Level-3"};
+    private int sceneIndex = 0;
+
+    void Start()
     {
-        //get user input
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            //switch scenes
-            Debug.Log("Space Bar Pressed");
-            SceneManager.LoadScene("Level-1");
-        }
-         
+        //reset to the Hub level
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("LevelTrigger"))
+        {
+            if(sceneIndex < nextScene.Length)
+            {
+            Debug.Log("A scene was loaded");
+            SceneManager.LoadScene(nextScene[sceneIndex]);
+            sceneIndex++;
+            }
+        }
+    }
+
 }
