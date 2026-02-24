@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - LevelTrigger
+  - CoinCollector
   layers:
   - Default
   - TransparentFX
