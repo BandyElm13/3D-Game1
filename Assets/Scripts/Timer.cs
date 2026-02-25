@@ -1,16 +1,15 @@
+using System.Data;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int startTime {get; private set;}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public void gameTimer()
+{
+    startTime--;
+}
+
 }
