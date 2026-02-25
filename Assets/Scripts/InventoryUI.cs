@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    private string TextMeshPro cointext;
+    private  TextMeshPro cointext;
 
     void Start()
     {
