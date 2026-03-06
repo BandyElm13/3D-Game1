@@ -6,11 +6,11 @@ public class PlayerInventory : MonoBehaviour
 {
     public int NumberOfCoins { get; private set;}
 
-    public UnityEvent<PlayerInventory> onPurpleCoinEvent;
+    public UnityEvent onPurpleCoinEvent;
 
     public void CoinCollection()
     {
         NumberOfCoins++;
-        onPurpleCoinEvent.Invoke(this);
+        onPurpleCoinEvent.Invoke();
     }
 }
