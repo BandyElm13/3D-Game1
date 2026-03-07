@@ -1047,8 +1047,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4073912419937574242, guid: 36c18c49572b9e14c981e6e1dfef5985, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6955630618105856097}
   m_SourcePrefab: {fileID: 100100000, guid: 36c18c49572b9e14c981e6e1dfef5985, type: 3}
+--- !u!1 &6955630618105856096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4073912419937574242, guid: 36c18c49572b9e14c981e6e1dfef5985, type: 3}
+  m_PrefabInstance: {fileID: 6955630618105856095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6955630618105856097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955630618105856096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c52f657fc78784fb2471d732c6f690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EscapeTomenu
 --- !u!1001 &7297491616067427831
 PrefabInstance:
   m_ObjectHideFlags: 0
