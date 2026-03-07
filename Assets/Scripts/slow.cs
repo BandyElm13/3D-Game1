@@ -1,17 +1,15 @@
 using UnityEngine;
-
+using StarterAssets;
 public class slow : MonoBehaviour
-{
-    public double speed = 2;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+{   
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        speed = speed * 0.5;
+        if(other.CompareTag("LevelTrigger"))
+        {
+            ThirdPersonController player = other.GetComponent<ThirdPersonController>();
+            player.MoveSpeed = player.MoveSpeed *= 0.5f;
+            player.SprintSpeed = player.SprintSpeed *= 0.5f;
+        }
+         gameObject.SetActive(false);
     }
 }

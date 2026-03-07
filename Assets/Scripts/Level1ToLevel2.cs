@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Level1ToLevel2 : MonoBehaviour
 {
+    public string nextLevel = "sample";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +20,7 @@ public class Level1ToLevel2 : MonoBehaviour
     {
         if (other.CompareTag("LevelTrigger"))
         {
-            SceneManager.LoadScene("Level-2");
+            SceneManager.LoadScene(nextLevel);
         }
     }
 }

@@ -4,15 +4,17 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    private TextMeshProUGUI cointext;
-    private TextMeshProUGUI timerText;
-
+    public TextMeshProUGUI cointext;
     private PlayerInventory pi;
-    private Timer gt;
+
 
     void Start()
     {
-    cointext = GetComponent<TextMeshProUGUI>();
+    if(cointext == null)
+        {
+            cointext = GetComponent<TextMeshProUGUI>();
+        }
+    
     pi = FindAnyObjectByType<PlayerInventory>();
     if (pi != null)
         {
@@ -22,6 +24,12 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdatePurpleCoin()
     {
-        cointext.text = pi.NumberOfCoins.ToString();
+        if(pi.NumberOfCoins < 10)
+        {
+            cointext.text = "0" + pi.NumberOfCoins.ToString();
+        } else
+        {
+            cointext.text = pi.NumberOfCoins.ToString();
+        }
     }
 }
