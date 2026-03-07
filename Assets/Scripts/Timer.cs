@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     public IEnumerator gameTimer() {
     for(int i = curTime; i > 0; i--) {
         curTime = i;
-        Debug.Log("current time = " + i);
+        //Debug.Log("current time = " + i);
         yield return new WaitForSeconds(1f);
     }
     curTime = 0;
